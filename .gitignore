@@ -1,0 +1,6 @@
+venv/
+.env
+__pycache__/
+*.pyc
+logs/
+MULTI_AI_AGENT.egg-info/

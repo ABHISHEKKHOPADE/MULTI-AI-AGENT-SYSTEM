@@ -1,39 +1,48 @@
-pipeline{
+pipeline {
     agent any
 
     environment {
-        SONAR_PROJECT_KEY = 'MULTI-AI-AGENTS'
-		SONAR_SCANNER_HOME = tool 'sonar qube scanner'
-        // AWS_REGION = 'us-east-1'
-        // ECR_REPO = 'my-repo'
-        // IMAGE_TAG = 'latest'
-	}
+        SONAR_PROJECT_KEY = 'LLMOPS'
+        SONAR_SCANNER_HOME = tool 'Sonarqube'
+    }
 
-    stages{
-        stage('Cloning Github repo to Jenkins'){
-            steps{
-                script{
+    stages {
+
+        stage('Cloning Github repo to Jenkins') {
+            steps {
+                script {
                     echo 'Cloning Github repo to Jenkins............'
-                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ABHISHEKKHOPADE/MULTI-AI-AGENT-SYSTEM.git']])
+                    checkout scmGit(
+                        branches: [[name: '*/main']],
+                        extensions: [],
+                        userRemoteConfigs: [[
+                            url: 'https://github.com/ABHISHEKKHOPADE/MULTI-AI-AGENT-SYSTEM.git'
+                        ]]
+                    )
+                }
             }
         }
 
-    stage('SonarQube Analysis'){
-			steps {
-				withCredentials([string(credentialsId: 'sonarqube token', variable: 'SONAR_TOKEN')]) {
-    					
-					withSonarQubeEnv('SonarQube ') {
-    						sh """
-						${SONAR_SCANNER_HOME}/bin/sonar-scanner \
-						-Dsonar.projectKey=${SONAR_PROJECT_KEY} \
-						-Dsonar.sources=. \
-						-Dsonar.host.url=http://sonarqube-dind:9000 \
-						-Dsonar.login=${SONAR_TOKEN}
-						"""
-					}
-				}
-			}
-		}
+        stage('SonarQube Analysis') {
+            steps {
+                withCredentials([
+                    string(credentialsId: 'sonarqube-token', variable: 'SONAR_TOKEN')
+                ]) {
+                    withSonarQubeEnv('Sonarqube') {
+                        sh """
+                        ${SONAR_SCANNER_HOME}/bin/sonar-scanner \
+                        -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
+                        -Dsonar.sources=. \
+                        -Dsonar.host.url=http://sonarqube:9000 \
+                        -Dsonar.login=${SONAR_TOKEN}
+                        """
+                    }
+                }
+            }
+        }
+
+    }  // closes stages
+}      // closes pipeline
 
     // stage('Build and Push Docker Image to ECR') {
     //         steps {
@@ -69,5 +78,5 @@ pipeline{
     //     }
     //  }
         
-    }
-}}
+    // }
+// }}

@@ -70,29 +70,6 @@ Jenkins CI/CD Pipeline
 SonarQube Analysis
 ```
 
----
-
-## 📂 Project Structure
-
-```
-MULTI-AI-AGENT-SYSTEM
-│
-├── app/
-│   ├── core/
-│   ├── config/
-│   ├── common/
-│   └── main.py
-│
-├── frontend/
-│   └── streamlit_app.py
-│
-├── Dockerfile
-├── Jenkinsfile
-├── requirements.txt
-└── README.md
-```
-
----
 
 ## ⚙️ Setup Instructions
 

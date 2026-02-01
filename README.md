@@ -1,76 +1,80 @@
-🎌 Multi-AI Agent System
-----------------------------
+# 🎌 Multi-AI Agent System
 
-A production-oriented Multi-AI Agent System that allows users to interact with multiple AI agents through a web interface.
-This project focuses not only on AI functionality but also on backend architecture, containerization, and CI/CD automation.
+A **production-oriented Multi-AI Agent System** that allows users to interact with multiple AI agents through a web interface.
+This project focuses not only on AI functionality but also on **backend architecture, containerization, and CI/CD automation**.
 
-👤 Author
-----------
-Abhishek Khopade
+---
 
-Aspiring ML Engineer | MLOps | LLMOps
+## 👤 Author
 
-🔗 GitHub: https://github.com/ABHISHEKKHOPADE
+**Abhishek Khopade**
 
-🚀 Features
--------------
+Aspiring **ML Engineer | MLOps | LLMOps**
 
-Multi-Agent AI interaction
+🔗 GitHub:
+[https://github.com/ABHISHEKKHOPADE](https://github.com/ABHISHEKKHOPADE)
 
-FastAPI backend APIs
+---
 
-Streamlit frontend UI
+## 🚀 Features
 
-LangChain / LangGraph orchestration
+* Multi-Agent AI interaction
+* FastAPI backend APIs
+* Streamlit frontend UI
+* LangChain / LangGraph orchestration
+* Groq LLM integration
+* Docker containerization
+* Jenkins CI/CD pipeline
+* SonarQube static code analysis
+* Error handling & modular architecture
 
-Groq LLM integration
+---
 
-Docker containerization
+## 🧱 Tech Stack
 
-Jenkins CI/CD pipeline
+### Backend
 
-SonarQube static code analysis
+* Python
+* FastAPI
+* LangChain / LangGraph
+* Groq LLM
 
-Error handling & modular architecture
+### Frontend
 
-🧱 Tech Stack
---------------
-Backend
+* Streamlit
 
-FastAPI
+### DevOps & Tools
 
-Python
+* Docker
+* Jenkins
+* SonarQube
+* Git & GitHub
 
-LangChain / LangGraph
+---
 
-Groq LLM
+## 🏗️ Project Architecture
 
-Frontend
-
-Streamlit
-
-DevOps & Tools
-
+```
+User
+  ↓
+Streamlit UI
+  ↓
+FastAPI Backend
+  ↓
+AI Agents (LangChain / LangGraph + Groq)
+  ↓
 Docker
+  ↓
+Jenkins CI/CD Pipeline
+  ↓
+SonarQube Analysis
+```
 
-Jenkins
+---
 
-SonarQube
+## 📂 Project Structure
 
-Git & GitHub
-
-🏗️ Project Architecture
---------------------------
-User → Streamlit UI → FastAPI Backend → AI Agents (LangChain/LangGraph + Groq)
-                                      ↓
-                                  Docker
-                                      ↓
-                           Jenkins CI/CD Pipeline
-                                      ↓
-                               SonarQube Analysis
-
-📂 Project Structure
----------------------
+```
 MULTI-AI-AGENT-SYSTEM
 │
 ├── app/
@@ -86,86 +90,113 @@ MULTI-AI-AGENT-SYSTEM
 ├── Jenkinsfile
 ├── requirements.txt
 └── README.md
+```
 
-⚙️ Setup Instructions
-----------------------
-1. Clone Repository
-git clone https://github.com/your-username/MULTI-AI-AGENT-SYSTEM.git
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/ABHISHEKKHOPADE/MULTI-AI-AGENT-SYSTEM.git
 cd MULTI-AI-AGENT-SYSTEM
+```
 
-2. Create Virtual Environment
+### 2. Create Virtual Environment
+
+```bash
 python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+```
 
-3. Install Dependencies
+**Activate Environment**
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / Mac**
+
+```bash
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-4. Run Backend
-uvicorn app.main:app --reload
+### 4.Run code
 
-5. Run Frontend
-streamlit run frontend/streamlit_app.py
+```bash
+python main.py
+```
 
-🐳 Docker Setup
-Build Image
+
+## 🐳 Docker Setup
+
+### Build Image
+
+```bash
 docker build -t multi-ai-agent .
+```
 
-Run Container
+### Run Container
+
+```bash
 docker run -p 8000:8000 multi-ai-agent
+```
 
-🔄 CI/CD Pipeline (Jenkins)
+---
 
-Pipeline stages:
+## 🔄 CI/CD Pipeline (Jenkins)
 
-Pull code from GitHub
+**Pipeline Stages**
 
-Clone repository into Jenkins workspace
+* Pull code from GitHub
+* Clone repository into Jenkins workspace
+* Run SonarQube static code analysis
 
-Run SonarQube static code analysis
 
-(Future Scope: Docker build & deployment)
+---
 
-🔍 SonarQube Integration
--------------------------
+## 🔍 SonarQube Integration
 
-Detects bugs
+SonarQube helps in:
 
-Identifies security vulnerabilities
+* Detecting **bugs**
+* Identifying **security vulnerabilities**
+* Finding **code smells**
+* Measuring **code quality metrics**
 
-Finds code smells
+This ensures **clean, maintainable, and production-ready code**.
 
-Measures code quality metrics
+---
 
-This ensures clean and maintainable code before production.
+## 🧪 Future Improvements
 
-🧪 Future Improvements
--------------------------
+* Authentication & Authorization
+* Monitoring & Logging
+* Automated Testing
+* Kubernetes Deployment
+* Cloud Deployment
 
-Authentication & Authorization
+---
 
-Monitoring & Logging
+## 📚 Key Learnings
 
-Automated Testing
+* CI/CD automation using Jenkins
+* Docker networking & containerization
+* Static code analysis with SonarQube
+* Multi-agent AI orchestration
+* Backend API structuring
 
-Kubernetes Deployment
+---
 
-Cloud Deployment
+## 🤝 Contribution
 
-📚 Learnings
---------------
-
-CI/CD automation using Jenkins
-
-Docker networking and containerization
-
-Static code analysis with SonarQube
-
-Multi-agent AI orchestration
-
-Backend API structuring
-
-🤝 Contribution
-----------------
-
-Pull requests are welcome. For major changes, open an issue first to discuss what you would like to change.
+Pull requests are welcome.
+For major changes, please open an issue first to discuss what you would like to change.

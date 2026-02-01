@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SONAR_PROJECT_KEY = 'LLMOPS'
-        SONAR_SCANNER_HOME = tool 'Sonarqube'
+        SONAR_SCANNER_HOME = tool 'sonar qube scanner'
     }
 
     stages {

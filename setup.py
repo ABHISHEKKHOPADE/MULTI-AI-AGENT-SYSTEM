@@ -1,4 +1,4 @@
-from setuptools import setup,find_packages
+from setuptools import find_packages, setup
 
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
@@ -6,7 +6,7 @@ with open("requirements.txt") as f:
 setup(
     name="MULTI-AI AGENT",
     version="0.1",
-    author="abhishek",
+    author="a",
     packages=find_packages(),
-    install_requires = requirements,
+    install_requires=requirements,
 )

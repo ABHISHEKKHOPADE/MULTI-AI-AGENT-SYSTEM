@@ -13,6 +13,7 @@ class RequestState(BaseModel):
     system_prompt: str
     message: str
     allow_search: bool
+    mode: str = "single"
 
 
 @app.post("/chat")
@@ -22,12 +23,16 @@ def chat_endpoint(request: RequestState):
     if request.model_name not in settings.ALLOWED_MODEL_NAMES:
         raise HTTPException(status_code=400, detail="Invalid model name")
 
+    if request.mode not in {"single", "multi"}:
+        raise HTTPException(status_code=400, detail="Invalid mode")
+
     try:
         response = get_response_from_ai_agents(
             request.model_name,
             request.message,
             request.allow_search,
-            request.system_prompt
+            request.system_prompt,
+            request.mode,
         )
 
         return {"response": response}

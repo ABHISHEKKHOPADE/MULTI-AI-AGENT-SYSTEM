@@ -1,5 +1,6 @@
 langchain-groq
 langchain-community
+langchain-tavily
 python-dotenv
 uvicorn
 fastapi

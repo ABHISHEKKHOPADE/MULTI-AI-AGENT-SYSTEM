@@ -4,3 +4,15 @@ __pycache__/
 *.pyc
 logs/
 MULTI_AI_AGENT.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+docs/
+output/
+tmp
+.env.example
+CLEANUP_REPORT.md
+CLEANUP_AUDIT.md
+PROJECT_INVENTORY.md

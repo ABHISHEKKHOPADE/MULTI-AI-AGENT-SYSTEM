@@ -5,3 +5,10 @@ __pycache__/
 *.pyd
 .git
 .env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+logs/
+MULTI_AI_AGENT.egg-info/

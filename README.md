@@ -11,6 +11,8 @@
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C)
 ![Groq](https://img.shields.io/badge/Groq-F55036)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![SonarQube](https://img.shields.io/badge/SonarQube-4E9BCD?logo=sonarqube&logoColor=white)
+
 
 </div>
 
